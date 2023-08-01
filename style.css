@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conatainer{
+   background-color: rgb(8, 8, 60);
+   height: 100vh;
+   width: 100%;
+   padding: 10px;
+
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.todo-app h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  
+    
+}
+.todo-app h2 img{
+   width: 30px;
+   margin-left: 10px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+}
+input[type="text"]{
+    outline: none;
+    border: none;
+    background: #f1f1f1;
+    padding:10px 20px ;
+    font-size: 20px;
+    border-radius: 20px;
+  
+}
+
+.row button{
+    padding: 10px 25px;
+    font-size: 20px;
+    outline: none;
+    border:none;
+    border-radius: 20px;
+    background-color: rgb(255, 109, 56);
+}
+.list-container{
+    margin-top: 20px;
+    color:black;
+    font-size: 20px;
+   
+}
+ul li{
+    color:black;
+    padding:12px 8px 12px 40px;
+    font-size: 22px;
+    list-style-type: none;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top:15px;
+    left:8px;
+}
+ul li.checked{
+    color:#797979;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    content: "";
+    background-image: url('images/checked.png');
+}
+ul li span{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top:8px;
+    right: 0;
+    font-size: 28px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:600px){
+  .conatainer{
+    overflow: hidden;
+  }
+  .row{
+    justify-content: space-around;
+  }
+}
